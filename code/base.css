@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Guardian-Egyp-Web-Regular';
+    src: url('Guardian-Egyp-Web-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+body{
+	font-family: "Guardian-Egyp-Web-Regular",sans-serif;
+	font-weight: normal;
+	margin:0;
+	padding:0;
+	background-color:#005689;
+    color:white;
+}
+
+#bg-exit{
+	cursor: pointer;
+	/*	Make all text unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Constrain max-width of the banner */
+.flex-fixed{
+	max-width: 64rem;
+	max-height: 64rem;
+}
+
+/*
+Sticky footer using FlexBox
+http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+The WRAPPER is set to the height of the window.
+The HISTORY area is told to expand as needed.
+*/
+
+.wrapper{
+	
+	display: -webkit-flex;
+	display: flex;   
+
+	min-width: 320px;
+	min-height: 100vh;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	color:white;
+	overflow: hidden; /* Crop circle past 1024px wide */
+}
+
+.content{
+		 
+	-webkit-flex: 1;     
+	flex: 1 1 auto;
+	
+    background-image: url('news.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	/*	Allow circle image overflow content section behind footer */
+	padding-bottom: 10rem;
+    margin-bottom: -10rem;
+	padding-right: 10rem;
+    margin-right: -10rem;
+	
+    margin-left: 25%;
+	
+	min-height: 15rem;
+
+}
+
+header, footer{
+	
+	display: -webkit-flex;
+	display: flex;   
+	
+	-webkit-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+	margin:0;
+	padding: 11px;
+
+}
+
+h2, h4{
+	margin:0;
+	padding:0;
+    font-size: 2rem;
+}
+
+h4{
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.guardian-roundel{
+	width:2rem;
+	height:2rem;
+	fill: white;
+}
+
+.guardian-logo{
+    width: 8rem;
+    height: 2rem;
+	fill: white;
+}
+
+.google-icon{
+	height:2.5rem;
+	width:6rem;
+}
+
+.download-icon{
+	fill: white;
+	position: relative;
+	top:0.4rem;
+	width:1.6rem;
+	height:1.6rem;
+}
+
+img{
+	max-width: 100%;
+}
+
+@media (min-width:25rem) {
+	
+	h2{
+    	font-size: 2.95rem;
+	}
+
+	h4{
+    	font-size: 1.25rem;
+	}
+	
+	.guardian-roundel{
+		width:2.95rem;
+		height:2.95rem;
+	}
+	
+	.guardian-logo{
+		width: 10rem;
+		height: 2rem;
+	}
+}
+
+/* iOS */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width:25rem) {
+	
+	h2{
+    	font-size: 2.4rem;
+	}
+
+	h4{
+    	font-size: 1.1rem;
+	}
+}
+
+@media (min-width:34rem) {
+	
+	h2{
+    	font-size: 3.4rem;
+	}
+
+	h4{
+    	font-size: 1.6rem;
+	}
+}
+
+@media (min-width:44rem) {
+	
+	h2{
+    	font-size: 5rem;
+	}
+
+	h4{
+    	font-size: 2rem;
+	}
+	
+	.guardian-roundel{
+		width:4rem;
+		height:4rem;
+	}
+	
+	.guardian-logo{
+		width: 12rem;
+		height: 2.5rem;
+	}
+	footer{
+		margin-bottom: 1.5rem;
+	}
+	.download-icon{
+		width:2rem;
+		height:2rem;
+	}
+}
+
+@media {}
