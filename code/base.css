@@ -8,6 +8,13 @@ body{
     color:white;
 }
 
+.biffo{
+	margin:2rem;
+	padding:2rem;
+	border:1rem solid orangered;
+	background-color: aliceblue;
+}
+
 h1{
     font-size: 4rem;
     text-align: center;
